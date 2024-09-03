@@ -1,0 +1,121 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background: #D2DAFF;
+    color: #B1B2FF;
+    font-family: "Quicksand-", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.my-navbar {
+    background: #D2DAFF !important;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #B1B2FF !important;
+    font-size: 20px;
+}
+
+.listContainer {
+    background: #EEF1FF;
+    width: 450px;
+    min-width: 450px;
+    padding: 0;
+    margin: 0 auto; /* Center the container horizontally */
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 25px;
+    box-shadow: 4px 4px 8px rgba(170, 196, 255, 0.95); /* Add shadow around the container */
+}
+.listContainer>* {
+    flex: 1 100%;
+}
+
+.listTittle {
+    background: #B1B2FF;
+    color: #EEF1FF;
+    height: 60px;
+    font-size: 30px;
+    align-content: center;
+    border-radius: 25px 25px 0 0;
+}
+
+.listInput {
+    background: #EEF1FF;
+    color: #AAC4FF;
+    height: 70px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.input {
+    flex: 1;
+    font-size: 20px;
+    border-radius: 8px;
+    outline: none; /* Remove default outline */
+}
+.input:focus {
+    border-color: #FF8C64;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    margin-left: 5px;
+    border-radius: 10px;
+}
+
+.listBody {
+    background: #EEF1FF;
+    color: #AAC4FF;
+    height: 500px;
+    font-size: 30px;
+    text-align: left;
+    border-radius: 0 0 25px 25px;
+    
+}
+
+.listBody ul {
+    list-style-type: none; /* Removes default bullets */
+    margin: 0;
+}
+
+.listBody li {
+    font-size: 20px;
+    padding: 10px;
+    display: flex;
+}
+
+.listBody li input[type="checkbox"] {
+    margin-right: 15px; 
+    transform: scale(1.5);
+    accent-color: #B1B2FF;
+}
+
+.listBody li label {
+    flex: 1; 
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #D2DAFF;
+}
+
+.error-message {
+    display:none; 
+    font-size: 15px;
+    color: red; 
+    margin: 0;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 10px;
+}

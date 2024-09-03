@@ -1,0 +1,38 @@
+</main>
+
+<footer>
+    <p class="copyright">© <%= new Date().getFullYear() %> Jwalant</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="index.js" charset="UTF-8"></script>
+
+<script>
+     $(document).ready(function() {
+        //Prevents empty task entries
+        $('form').submit(function(event) {
+            const taskInput = $('input[name="task"]');
+            const errorMessage = $(".error-message");
+
+            if(taskInput.val().trim() === '') {
+                errorMessage.show(); //Show error message
+                taskInput.focus(); //Focuses on the input field
+                event.preventDefault(); //Prevents form from submitting
+            } else {
+                errorMessage.hide(); //Hides error message if input not empty
+            }
+        });
+        //Adds and removes strike throught text when task is completed
+        $('.listBody input[type="checkbox"]').change(function() {
+            const li = $(this).parent();
+            if (this.checked) {
+                li.addClass('completed');
+            } else {
+                li.removeClass('completed');
+            }
+        });
+    });
+</script>
+</body>
+</html>

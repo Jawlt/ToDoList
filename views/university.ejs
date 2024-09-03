@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+
+<div class="listContainer">
+    <div class="listTittle">University Tasks</div>
+    <div class="listInput">
+        <form class="input" role="input" method="POST" action="/university">
+            <p class="error-message">Please enter a task before adding.</p>
+            <input class="input" type="input" name="task" placeholder="Add Task" aria-label="Input">
+            <button class="btn btn-outline-success" type="submit">Add</button>
+            
+        </form>
+    </div>
+    <div class="listBody">
+        <ul>
+            <% tasks.forEach(function(task, index) { %>
+                <li>
+                    <input type="checkbox" id="task-<%= index %>" name="task-<%= index %>">
+                    <label for="task-<%= index %>"><%= task %></label>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>
